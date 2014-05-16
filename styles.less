@@ -1,3 +1,35 @@
+.list-tree {
+
+    &.entries {
+        margin-top: 20px;
+    }
+
+    .list-nested-item {
+        & > .list-item {
+            &:before {
+                left: 5px;
+            }
+        }
+
+        &:before {
+            background-color: #1abc9c;
+            height: 38px;
+        }
+    }
+
+    .list-item {
+        &.header {
+            span.name {
+                &.icon-repo {
+                    display: inline-block;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
 .cli-status {
     position: absolute;
     top: 0;
