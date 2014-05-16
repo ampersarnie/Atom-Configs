@@ -4,16 +4,11 @@
         margin-top: 20px;
     }
 
-    .list-nested-item {
-        & > .list-item {
+    .list-nested-item:first-child  {
+        & > div.list-item {
             &:before {
                 left: 5px;
             }
-        }
-
-        &:before {
-            background-color: #1abc9c;
-            height: 38px;
         }
     }
 
@@ -22,7 +17,7 @@
             span.name {
                 &.icon-repo {
                     display: inline-block;
-                    margin-top: 5px;
+                    margin-top: 8px;
                     margin-left: 5px;
                 }
             }
@@ -35,8 +30,7 @@
     top: 0;
     right: 0;
     display: none;
-    min-width: 200px !important;
-    width: 25%;
+    width: 50%;
 
     .panel-heading {
         background-color: #1abc9c !important;
