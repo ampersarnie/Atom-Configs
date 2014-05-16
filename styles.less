@@ -1,25 +1,28 @@
-.list-tree {
+.tree-view {
+    > .entry {
+        > .header {
+            background-color: #1ABC9F;
+            margin: 0 -10px 0 -5px;
 
-    &.entries {
-        margin-top: 20px;
-    }
-
-    .list-nested-item:first-child  {
-        & > div.list-item {
             &:before {
-                left: 5px;
+                color: #ECF0F6;
+                padding-left: 5px;
             }
-        }
-    }
 
-    .list-item {
-        &.header {
             span.name {
+                color: #ECF0F6;
+                height: 30px;
                 &.icon-repo {
                     display: inline-block;
                     margin-top: 8px;
                     margin-left: 5px;
                 }
+            }
+        }
+
+        &.selected {
+            > .header {
+                background-color: #7f8c8d;
             }
         }
     }
@@ -33,7 +36,7 @@
     width: 50%;
 
     .panel-heading {
-        background-color: #1abc9c !important;
+        background-color: #1abc9c;
         display: block;
         height: 38px;
     }
