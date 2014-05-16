@@ -1,0 +1,4 @@
+'.source.scss':
+    'media':
+        'prefix': '@media'
+        'body': '@media() {\n\t\n}'
