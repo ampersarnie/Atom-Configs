@@ -1,5 +1,10 @@
+@color-background: #2c3e50;
+@color-topbar: #1abc9c;
+
+@color-mixed-ten: mix(@color-topbar, @color-background, 10%);
+
 .tree-view {
-    background-color: mix(#1abc9c, #2c3e50, 10%); // TabBar Background -> Main background @ 10%
+    background-color: @color-mixed-ten; // TabBar Background -> Main background @ 10%
     padding-top: 38px;
 
     > .entry {
@@ -10,7 +15,7 @@
         }
 
         > .header {
-            background-color: #1abc9c;
+            background-color: @color-topbar;
             margin: 0 -10px 0 -5px;
             position: fixed;
             top: 1px;
@@ -23,7 +28,7 @@
             }
 
             span.name {
-                color: #2c3e50;
+                color: @color-background;
                 height: 30px;
                 &.icon-repo {
                     display: inline-block;
@@ -48,14 +53,14 @@
 
             .selected {
                 &:before {
-                    background-color: mix(#1abc9c, #2c3e50, 30%); // TabBar Background -> Main background @ 30%
+                    background-color: mix(@color-topbar, @color-background, 30%); // TabBar Background -> Main background @ 30%
                 }
             }
         }
 
         &.selected {
             > .header {
-                background-color: mix(#1abc9c, #2c3e50, 70%); // TabBar Background -> Main background @ 30%
+                background-color: mix(@color-topbar, @color-background, 70%); // TabBar Background -> Main background @ 30%
             }
         }
     }
@@ -63,12 +68,12 @@
 
 .editor {
     .gutter {
-        background-color: mix(#1abc9c, #2c3e50, 30%); // TabBar Background -> Main background @ 30%
-        border-right: 10px solid mix(#1abc9c, #2c3e50, 10%); // TabBar Background -> Main background @ 10%
+        background-color: mix(@color-topbar, @color-background, 30%); // TabBar Background -> Main background @ 30%
+        border-right: 10px solid @color-mixed-ten; // TabBar Background -> Main background @ 10%
 
         .line-number {
             &.cursor-line {
-                background-color: mix(#1abc9c, #2c3e50, 70%); // TabBar Background -> Main background @ 70%
+                background-color: mix(@color-topbar, @color-background, 70%); // TabBar Background -> Main background @ 70%
             }
         }
     }
