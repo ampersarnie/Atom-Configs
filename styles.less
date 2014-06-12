@@ -1,7 +1,9 @@
 .tree-view {
+    background-color: mix(#1abc9c, #2c3e50, 10%); // TabBar Background -> Main background @ 10%
+
     > .entry {
         > .header {
-            background-color: #1ABC9F;
+            background-color: #1abc9c;
             margin: 0 -10px 0 -5px;
 
             &:before {
@@ -10,7 +12,7 @@
             }
 
             span.name {
-                color: #ECF0F6;
+                color: #2c3e50;
                 height: 30px;
                 &.icon-repo {
                     display: inline-block;
@@ -20,9 +22,42 @@
             }
         }
 
+        .list-tree {
+            .list-item {
+                color: rgba(255, 255, 255, .5);
+
+                &.status-modified {
+                    color: inherit;
+                }
+
+                &.status-ignored {
+                    color: rgba(255, 255, 255, .25);
+                }
+            }
+
+            .selected {
+                &:before {
+                    background-color: mix(#1abc9c, #2c3e50, 30%); // TabBar Background -> Main background @ 30%
+                }
+            }
+        }
+
         &.selected {
             > .header {
-                background-color: #7f8c8d;
+                background-color: mix(#1abc9c, #2c3e50, 70%); // TabBar Background -> Main background @ 30%
+            }
+        }
+    }
+}
+
+.editor {
+    .gutter {
+        background-color: mix(#1abc9c, #2c3e50, 30%); // TabBar Background -> Main background @ 30%
+        border-right: 10px solid mix(#1abc9c, #2c3e50, 10%); // TabBar Background -> Main background @ 10%
+
+        .line-number {
+            &.cursor-line {
+                background-color: mix(#1abc9c, #2c3e50, 70%); // TabBar Background -> Main background @ 70%
             }
         }
     }
