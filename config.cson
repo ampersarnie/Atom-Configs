@@ -1,0 +1,18 @@
+'exception-reporting':
+  'userId': '4ff00049-d058-996c-88a2-4c521241f513'
+'release-notes':
+  'viewedVersion': '0.95.0'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '96dd8f0d86119d0aab546e0a74e9643191ac3727'
+'editor':
+  'tabLength': 4
+  'fontSize': 12
+  'lineHeight': 1.5
+'core':
+  'themes': [
+    'trendy-light-ui'
+    'trendy-dark-syntax'
+  ]
+'tree-view': {}
