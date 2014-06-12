@@ -1,10 +1,21 @@
 .tree-view {
     background-color: mix(#1abc9c, #2c3e50, 10%); // TabBar Background -> Main background @ 10%
+    padding-top: 38px;
 
     > .entry {
+        position: relative;
+
+        &:before {
+            background-color: transparent;
+        }
+
         > .header {
             background-color: #1abc9c;
             margin: 0 -10px 0 -5px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
 
             &:before {
                 color: #ECF0F6;
@@ -59,6 +70,14 @@
             &.cursor-line {
                 background-color: mix(#1abc9c, #2c3e50, 70%); // TabBar Background -> Main background @ 70%
             }
+        }
+    }
+}
+
+.workspace {
+    .horizontal {
+        .vertical {
+            z-index: 2;
         }
     }
 }
