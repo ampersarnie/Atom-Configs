@@ -1,10 +1,13 @@
 @color-background: #2c3e50;
 @color-topbar: #1abc9c;
+@color-light-text: #ecf0f1;
 
-@color-mixed-ten: mix(@color-topbar, @color-background, 10%);
+@color-mixed-10: mix(@color-topbar, @color-background, 10%);
+@color-mixed-30: mix(@color-topbar, @color-background, 30%);
+@color-mixed-70: mix(@color-topbar, @color-background, 70%);
 
 .tree-view {
-    background-color: @color-mixed-ten; // TabBar Background -> Main background @ 10%
+    background-color: @color-mixed-10; // TabBar Background -> Main background @ 10%
     padding-top: 38px;
 
     > .entry {
@@ -53,14 +56,14 @@
 
             .selected {
                 &:before {
-                    background-color: mix(@color-topbar, @color-background, 30%); // TabBar Background -> Main background @ 30%
+                    background-color: @color-mixed-30; // TabBar Background -> Main background @ 30%
                 }
             }
         }
 
         &.selected {
             > .header {
-                background-color: mix(@color-topbar, @color-background, 70%); // TabBar Background -> Main background @ 30%
+                background-color: @color-mixed-70; // TabBar Background -> Main background @ 30%
             }
         }
     }
@@ -68,12 +71,12 @@
 
 .editor {
     .gutter {
-        background-color: mix(@color-topbar, @color-background, 30%); // TabBar Background -> Main background @ 30%
-        border-right: 10px solid @color-mixed-ten; // TabBar Background -> Main background @ 10%
+        background-color: @color-mixed-30; // TabBar Background -> Main background @ 30%
+        border-right: 10px solid @color-mixed-10; // TabBar Background -> Main background @ 10%
 
         .line-number {
             &.cursor-line {
-                background-color: mix(@color-topbar, @color-background, 70%); // TabBar Background -> Main background @ 70%
+                background-color: @color-mixed-70; // TabBar Background -> Main background @ 70%
             }
         }
     }
@@ -83,6 +86,49 @@
     .horizontal {
         .vertical {
             z-index: 2;
+        }
+    }
+}
+
+.find-and-replace,
+.project-find {
+    .options-label {
+        color: @color-mixed-70;
+
+        .options {
+            color: @color-topbar;
+        }
+    }
+}
+
+.panel-bottom {
+    background-color: @color-mixed-10;
+
+    button {
+        background-color: @color-mixed-30;
+        color: fade(@color-light-text, 50%);
+
+        &:hover {
+            background-color: lighten(@color-mixed-30, 5%);
+        }
+
+        &.selected {
+            background-color: lighten(@color-mixed-30, 10%);
+        }
+    }
+
+    .description {
+        color: fade(@color-light-text, 50%);
+    }
+
+    .editor {
+        &.mini {
+            background-color: @color-background;
+            color: @color-light-text;
+
+            &.is-focused {
+                background-color: darken(@color-background, 5%);
+            }
         }
     }
 }
